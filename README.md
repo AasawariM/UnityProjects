@@ -1,3 +1,36 @@
+# Unity First Person Player Movement
+
+This project contains a basic first-person player controller built using Unity's CharacterController.
+
+## Features
+
+* WASD Movement
+* Sprint (Shift)
+* Jump (Space)
+* Crouch (R)
+* Mouse Look
+
+## Requirements
+
+* Unity editor version 2022.3
+
+## Setup
+
+1. Attach the script to a GameObject
+2. Add a CharacterController component
+3. Assign a Camera to `playerCamera`
+
+## Controls
+
+* W/A/S/D → Move
+* Shift → Run
+* Space → Jump
+* R → Crouch
+* Mouse → Look around
+
+
+
+
 # Character Controller vs Rigidbody
 ## Character Controller
 You control movement manually
