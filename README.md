@@ -1,3 +1,7 @@
+** Official Documentation **
+**https://docs.unity3d.com/Manual/**
+
+
 # Unity First Person Player Movement
 
 This project contains a basic first-person player controller built using Unity's CharacterController.
@@ -52,6 +56,10 @@ A Character Controller is a non-physics player movement system where you manuall
 - Inherits from MonoBehaviour → allows it to run in Unity (use Start(), Update(), etc.)
 
 ## MonoBehaviour
+
+**https://docs.unity3d.com/Manual/class-MonoBehaviour.html**
+
+
 -  you do not always need to use MonoBehaviour while defining a script for a player in Unity. While it is the default and most common approach, its use depends on whether the script needs to be attached directly to a GameObject or interact directly with the Unity scene lifecycle.
 - When You MUST Use MonoBehaviour
   - 1. Attaching to a GameObject: If you want to drag the script onto a player GameObject in the Inspector, it must inherit from MonoBehaviour.
