@@ -81,17 +81,18 @@ ProjectSettings/
 4. Add Collider for door
 
 1. Door Setup
-Add your door GameObject (imported model from free wood door asset pack)
+- Add your door GameObject (imported model from free wood door asset pack)
 it will have Frame and Door(with knob)
-Add Empty Object named collider in top door used
-Add Box Collider
-Enable Is Trigger (for detection zone if separate trigger not used)
+- Add Empty Object named collider in top door used
+- inside it: 
+- Add Box Collider
+Enable Is Trigger (for detection zone )
 Resize it to cover area in front of door
-Attach script:
+- Attach script:
 door_rotate.cs
-add audio open and close from assets in inspector.
-also add Door with knob (entire object) for door varible in inspector(door script)
-add rigidbody  with Constraints all checked.
+  - add audio open and close from assets in inspector.
+  - also add Door with knob (entire object) for door varible in inspector(door script)
+- add rigidbody  with Constraints all checked.
 
 2. very important for door to move out from the door => remove mesh collider from the frame 
 
