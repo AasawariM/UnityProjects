@@ -90,6 +90,7 @@ Resize it to cover area in front of door
 Attach script:
 door_rotate.cs
 add audio open and close from assets in inspector.
+also add Door with knob (entire object) for door varible in inspector(door script)
 add rigidbody  with Constraints all checked.
 
 2. very important for door to move out from the door => remove mesh collider from the frame 
