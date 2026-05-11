@@ -72,3 +72,9 @@ Draw yellow   Draw white
 Print object  Print no hit
 
 * note: Right now the ray is continous we need to limit it to be emitted on mouse click.
+- Added mouse click raycast along with object destroy and color change functionality.
+
+### reference
+https://www.youtube.com/watch?v=aaYfoe9i5lY
+https://discussions.unity.com/t/use-raycast-to-click-on-object/104242
+https://www.youtube.com/watch?v=_yf5vzZ2sYE
