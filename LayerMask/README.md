@@ -318,5 +318,9 @@ for each select => yes, change children
 now to the main car in inspector select the field value for Collision Layer Mask as collisions(new layer created)
 ![alt text](image-4.png)
 
+
+# with layer mask, output:
+![alt text](image-5.png)
+
 ```
 ```
