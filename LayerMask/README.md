@@ -296,5 +296,27 @@ This project helps understand:
 ![alt text](image.png)
 ![alt text](image-1.png)
 
+
+
+# to add a layerMask on new object trash_can.
+update the script
+````
+    [SerializeField] private LayerMask _collisionLayerMask; //anything that we collide with
+
+    if (Physics.Raycast(_rayOrigin.position, transform.forward, out hit,rayDistance, _collisionLayerMask ))
+
+````
+now to add new layer click on main car 
+in inspector go to Layer option currently set to default.
+click on Add Layer...
+add new layer as collisions
+![alt text](image-2.png)
+
+now click on the every car the main car will collide with and select layer we created just now.(except the object (trash_can) which we dont want to collide the car with)
+![alt text](image-3.png)
+for each select => yes, change children
+now to the main car in inspector select the field value for Collision Layer Mask as collisions(new layer created)
+![alt text](image-4.png)
+
 ```
 ```

@@ -7,6 +7,7 @@ public class movingCard : MonoBehaviour
 
     [SerializeField] private float _moveSpeed = 5f;
     [SerializeField] private Transform _rayOrigin;
+    [SerializeField] private LayerMask _collisionLayerMask; //anything that we collide with
     private float rayDistance = 13f;
 
     private float _laneChangeSpeed = 30f;
@@ -25,7 +26,7 @@ public class movingCard : MonoBehaviour
         RaycastHit hit;
 
         Debug.DrawRay(_rayOrigin.position, transform.forward * rayDistance, Color.red);
-        if (Physics.Raycast(_rayOrigin.position, transform.forward, out hit,rayDistance ))
+        if (Physics.Raycast(_rayOrigin.position, transform.forward, out hit,rayDistance, _collisionLayerMask ))
         {
             //Debug.Log("Found an object named: " + hit.transform.name);
             isMovingLanes = true;     
