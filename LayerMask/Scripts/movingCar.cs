@@ -9,7 +9,7 @@ public class movingCard : MonoBehaviour
     [SerializeField] private Transform _rayOrigin;
     private float rayDistance = 13f;
 
-    private float _laneChangeSpeed = 5f;
+    private float _laneChangeSpeed = 30f;
     
     private float _leftLanex = 107.5f;
     private float _rightLanex = 137.3f;
