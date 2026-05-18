@@ -17,18 +17,22 @@ public class CarController : MonoBehaviour
 {
     public WheelCollider[] wheel_col;
     public Transform[] wheels;
-    float torque = 100;
+    float torque = 200; //more speed
     float angle = 45;
 
-    void Update()
+    void FixedUpdate()
     {
         for (int i = 0; i < wheel_col.Length; i++)
         {
+            // Forward and backward movement
             wheel_col[i].motorTorque = Input.GetAxis("Vertical") * torque;
+
+            // Steering for front wheels
             if (i == 0 || i == 2) // We will set the steering angle and motor torque only to the front wheels. i.e at index 0 and 2 (front wheels)
             {
                 wheel_col[i].steerAngle = Input.GetAxis("Horizontal") * angle;
             }
+            // Update wheel mesh position and rotation
             var pos = transform.position;
             var rot = transform.rotation;
             wheel_col[i].GetWorldPose(out pos, out rot);
@@ -36,13 +40,14 @@ public class CarController : MonoBehaviour
             wheels[i].rotation = rot;
 
         }
-        if (Input.anyKeyDown)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
+        // Brake system
+
+        if (Input.GetKey(KeyCode.Space))
             {
                 foreach (var i in wheel_col)
                 {
-                    i.brakeTorque = 2000;
+                i.motorTorque = 0;
+                i.brakeTorque = 2000;
                 }
             }
             else
@@ -53,13 +58,8 @@ public class CarController : MonoBehaviour
                 }
 
             }
-        }
-
-
-
     }
 }
-
 ```
 # Code Explaination
 # Car Controller Script Explanation
